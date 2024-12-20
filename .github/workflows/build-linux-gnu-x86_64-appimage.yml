@@ -91,7 +91,7 @@ jobs:
           source ${{ github.workspace }}/.build-scripts/exports/tools.sh
 
           # Sets the build timestamp to the current commit to make builds reproducible
-          export SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%at"`"
+          export SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%ct"`"
 
           # Release is already specified by cargo appimage
           # https://github.com/StratusFearMe21/cargo-appimage/issues/30

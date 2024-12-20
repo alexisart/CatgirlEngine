@@ -13,7 +13,7 @@ SCRIPT_DIR=`dirname "$SCRIPT"`
 PROJECT_ROOT=$SCRIPT_DIR
 
 # Build Vars
-SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%at"`"
+SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%ct"`"
 PATH="$PROJECT_ROOT/.tools:$PATH"
 PATH="$PROJECT_ROOT/.tools/butler:$PATH"
 

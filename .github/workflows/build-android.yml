@@ -103,7 +103,7 @@ jobs:
           ANDROID_RELEASE_KEY_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEY_PASSWORD }}
         run: |
           # Sets the build timestamp to the current commit to make builds reproducible
-          export SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%at"`"
+          export SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%ct"`"
           ${{ github.workspace }}/android/gradlew assembleRelease
 
           mkdir -p ${{ github.workspace }}/upload/android
@@ -119,7 +119,7 @@ jobs:
           ANDROID_RELEASE_KEY_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEY_PASSWORD }}
         run: |
           # Sets the build timestamp to the current commit to make builds reproducible
-          export SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%at"`"
+          export SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%ct"`"
           # export CARGO_NDK_ANDROID_TARGET="arm64-v8a"
           sed -i "s/targets = [\"[a-z_0-9, ]*\"]/targets = [\"arm64\"]/" ${{ github.workspace }}/android/app/build.gradle
 
@@ -139,7 +139,7 @@ jobs:
           ANDROID_RELEASE_KEY_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEY_PASSWORD }}
         run: |
           # Sets the build timestamp to the current commit to make builds reproducible
-          export SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%at"`"
+          export SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%ct"`"
           # export CARGO_NDK_ANDROID_TARGET="armeabi-v7a"
           sed -i "s/targets = [\"[a-z_0-9, ]*\"]/targets = [\"arm\"]/" ${{ github.workspace }}/android/app/build.gradle
 
@@ -159,7 +159,7 @@ jobs:
           ANDROID_RELEASE_KEY_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEY_PASSWORD }}
         run: |
           # Sets the build timestamp to the current commit to make builds reproducible
-          export SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%at"`"
+          export SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%ct"`"
           # export CARGO_NDK_ANDROID_TARGET="x86"
           sed -i "s/targets = [\"[a-z_0-9, ]*\"]/targets = [\"x86\"]/" ${{ github.workspace }}/android/app/build.gradle
 
@@ -179,7 +179,7 @@ jobs:
           ANDROID_RELEASE_KEY_PASSWORD: ${{ secrets.ANDROID_RELEASE_KEY_PASSWORD }}
         run: |
           # Sets the build timestamp to the current commit to make builds reproducible
-          export SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%at"`"
+          export SOURCE_DATE_EPOCH="`git --no-pager log -1 --format="%ct"`"
           # export CARGO_NDK_ANDROID_TARGET="x86_64"
           sed -i "s/targets = [\"[a-z_0-9, ]*\"]/targets = [\"x86_64\"]/" ${{ github.workspace }}/android/app/build.gradle
 
