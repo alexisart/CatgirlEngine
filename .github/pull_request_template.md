@@ -48,6 +48,9 @@ This feature/bug fix was tested on...
 ## Banned/Restricted Features
 
 - Generative AI (for example, Large Language Models) are entirely banned due to both copyright and moral reasons. This includes both code and assets.
+- NFTs (or Non-Fungible Tokens) are entirely banned due to the nature of how NFTs are used. Nobody buys NFTs because of the NFT itself. Instead people buy them in hopes of selling for a profit. A market where there's only sellers is unsustainable and somebody will be out of money with a NFT that doesn't have any worth outside of the potential to sell to someone else.
+- Cryptocurrencies are almost entirely banned and may be entirely banned in the future. New coins are often created so people will buy into it for the hype of the original bitcoin and when enough people buy into it, often, the original investors will pull out and completely devalue the currency. This is known as a rugpull. Given the lack of regulations to protect those who were scammed by rugpulls, we do not want new coins to be minted for this engine or associated with this engine. Whether or not we allow existing coins like bitcoin to be used as a form of purchasing games made with the engine is restricted.
+- Microtransactions are not allowed for in game items in this engine. Due to the nature of what this engine is designed for, even if someone implemented microtransactions within the engine, it'd be unenforceable to prevent people from copying and giving items bought with microtransactions to other players.
 - Regex usage is restricted and should be evaluated more closely. This is to reduce the potential misuse of regex by using it as a parser or sanitizer which can introduce security vulnerabilities. If possible, other methods of parsing and sanitization should be considered both to maintain code legibility, and to make it easier to write unit tests.
 
 ## Notes
